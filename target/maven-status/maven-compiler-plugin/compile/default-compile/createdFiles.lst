@@ -1,8 +1,9 @@
 com/amazonaws/streams/sources/EventSource.class
-com/amazonaws/streams/utils/Event.class
 com/amazonaws/streams/sources/ConfigSource.class
 com/amazonaws/streams/utils/LFUCache.class
 com/amazonaws/streams/operators/AnalyticsOperator.class
+com/amazonaws/streams/utils/LRUCache.class
+com/amazonaws/streams/utils/Event.class
 com/amazonaws/streams/LogSink.class
 com/amazonaws/steams/AnalyticsJob.class
 com/amazonaws/streams/engine/Analyser.class

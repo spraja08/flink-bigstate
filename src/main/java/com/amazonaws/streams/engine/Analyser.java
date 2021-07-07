@@ -36,7 +36,7 @@ public class Analyser implements Serializable {
 
     public void performConfigUpdate( JsonObject config ) throws CompileException, IOException {
         //perform config update here
-        cache.set( config.get( "key" ).getAsInt(), config.get( "value").getAsInt() );
+        cache.put( config.get( "key" ).getAsInt(), config.get( "value").getAsInt() );
     }
 
     public JsonObject process(JsonObject inputEvent, String entityType, String entityId, JsonObject keyObject)

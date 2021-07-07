@@ -21,7 +21,7 @@ public class LFUCache {
         if (!vals.containsKey(key)) {
             //Load it from Actual Store (Redis?) and change the line below
             int value = -1;
-            set(key, value);
+            put(key, value);
             return value;
         }
 
@@ -41,7 +41,7 @@ public class LFUCache {
         return vals.get(key);
     }
 
-    public void set(int key, int value) {
+    public void put(int key, int value) {
         if (cap <= 0)
             return;
         // If key does exist, we are returning from here
@@ -55,7 +55,7 @@ public class LFUCache {
             lists.get(min).remove(evit);
             vals.remove(evit);
             counts.remove(evit);       
- }
+        }
         // If the key is new, insert the value and current min should be 1 of course
         vals.put(key, value);
         counts.put(key, 1);
